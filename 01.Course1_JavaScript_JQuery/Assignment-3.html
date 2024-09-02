@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Number :
+    <input type="text" id="t1" />
+    <br></br>
+    Second Number :
+    <input type="text" id="t2" />
+    <br></br>
+    <input type="button" onclick="calc(event)" value="Sum" />
+    <input type="button" onclick="calc(event)" value="Diff" />
+    <input type="button" onclick="calc(event)" value="Product" />
+    <input type="button" onclick="calc(event)" value="Division" />
+    </br>
+    <p id="p1"></p>
+
+    <script>
+        function calc(event) {
+            let num1 = parseInt(document.getElementById("t1").value);
+            let num2 = parseInt(document.getElementById("t2").value);
+            let operator = event.target.value;
+            let result;
+
+            if(operator === "Sum"){
+                result = num1 + num2;
+            } else if(operator === "Diff"){
+                result = num1 - num2;
+            } else if(operator === "Product"){
+                result = num1 * num2;
+            } else if(operator === "Division"){
+                result = num1 / num2;
+            }
+
+            // p1.innerHTML = parseInt(num1) + parseInt(num2);
+            p1.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
+<html>
+	<head>
+		<style> 
+			img
+			{
+				border: 1px solid gray;
+			} 
+		</style>
+	</head>
+	<body>
+		<h3>JavaScript Programming -- Event Handling </h3>
+		<hr/> 
+		
+		<br/><br/>
+		<img   src="Images/Image1.jpg" onmouseover="updateImage(event)"    border="2"  width="80"  height="60"  />
+		<img   src="Images/Image2.jpg" onmouseover="updateImage(event)"   border="2"  width="80"  height="60"  />
+		<img   src="Images/Image3.jpg" onmouseover="updateImage(event)"    border="2"  width="80"  height="60"  />
+		<img   src="Images/Image4.jpg" onmouseover="updateImage(event)"	   border="2"  width="80"  height="60"  />
+		<img   src="Images/Image5.jpg" onmouseover="updateImage(event)"	   border="2"  width="80"  height="60"  />
+		 
+		<hr/>
+		<img   src="Images/Image1.jpg"  id="bigImg"  border="2"  width="340"  height="380"  />
+	 	
+		<script> 
+		
+			 
+				
+				
+			  function updateImage( event  ) 
+			  {	 	 
+				 let bigImgObj = document.getElementById("bigImg");
+				 bigImgObj.src = event.target.src;
+			  }	
+			  
+			  
+		 
+		</script>  
+	</body>
+</html>

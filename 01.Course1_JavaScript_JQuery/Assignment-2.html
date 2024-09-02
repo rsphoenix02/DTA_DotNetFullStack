@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Product Name: <input type="text" id="pname">
+    <br><br>
+    Unit Price: <input type="text" id="pprice">
+    <br><br>
+    Quantity: <input type="text" id="quantity">
+    <br><br>
+    <input type="button" value="Get Total" onclick="getTotal()">
+    <br><br>
+    <p id="totalAmount"></p>
+    
+
+    <script>
+        function getTotal(){
+            let pname = document.getElementById("pname");
+            let pprice = document.getElementById("pprice").value;
+            let quantity = document.getElementById("quantity").value;
+
+            let total = parseInt(pprice) * parseInt(quantity);
+
+            if(quantity > 30) total = 0.8 * total;
+            else if(quantity > 20) total = 0.85 * total;
+            else if(quantity > 10) total = 0.9 * total;
+
+            let totalAmount = document.getElementById("totalAmount");
+            totalAmount.innerHTML = "Total Amount: " + total;
+        }
+    </script>
+</body>
+</html>

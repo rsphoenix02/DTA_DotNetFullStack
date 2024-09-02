@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Working with JavaScript</h3>
+    <hr/>
+
+    <fieldset>
+        <legend>User Login</legend>
+        User ID: <input type = "text" id = "userid">
+        <br>
+        <br>
+        Password: <input type = "password" id = "password">
+        <br>
+        <br>
+        <input type="button" onclick="validate()" value="login">
+        <br>
+        <br>
+        <p id="message"></p>
+    </fieldset>
+
+    <p>
+        Welcome
+    </p>
+
+    <script>
+        let paraObj = document.getElementById("message");
+        let userid = document.getElementById("userid");
+        let password = document.getElementById("password");
+        
+        function validate(){
+
+            if(userid.value === "admin" && password.value === "123"){
+                paraObj.style.backgroundColor = "Green";
+                paraObj.style.color = "White";
+                paraObj.innerHTML = "Hello, Admin";
+            } else {
+                paraObj.innerHTML = "Invalid login";
+                paraObj.style.backgroundColor = "Red";
+                paraObj.style.color = "White";
+            }
+        
+        }
+        
+    </script>
+    
+</body>
+</html>

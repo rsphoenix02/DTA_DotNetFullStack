@@ -1,0 +1,30 @@
+<html>
+
+<head></head>
+
+<body>
+    <h3>JavaScript Programming</h3>
+    <hr />
+    First Number :
+    <input type="text" id="t1" />
+    <br></br>
+    Second Number :
+    <input type="text" id="t2" />
+    <br></br>
+    <input type="button" onclick="f1()" value="Sum" />
+    </br>
+    <p id="p1"></p>
+
+    <script>
+        function f1() {
+            let num1 = document.getElementById("t1").value;
+            let num2 = document.getElementById("t2").value;
+            let p1 = document.getElementById("p1");
+
+            // p1.innerHTML = parseInt(num1) + parseInt(num2);
+            p1.innerHTML = num1 * num2;
+        }
+    </script>
+</body>
+
+</html>
